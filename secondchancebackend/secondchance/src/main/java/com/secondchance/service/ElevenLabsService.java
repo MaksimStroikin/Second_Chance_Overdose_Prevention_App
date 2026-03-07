@@ -24,12 +24,12 @@ public class ElevenLabsService {
     @Value("${elevenlabs.api.key}")
     private String apiKey;
 
-    // Use default voice "Rachel" for now
-    private static final String VOICE_ID = "21m00Tcm4TlvDq8ikWAM"; 
+    // We will use "Bella", a much softer, warmer, and more caring female voice
+    private static final String VOICE_ID = "EXAVITQu4vr4xnSDxMaL"; 
     private static final String ELEVENLABS_API_URL = "https://api.elevenlabs.io/v1/text-to-speech/" + VOICE_ID;
 
-    // We will save the generated MP3s to a static public folder so the React Native app can download/play them
-    private static final String AUDIO_DIR = "src/main/resources/static/audio/";
+    // We will save the generated MP3s to an external folder so we can serve them dynamically
+    private static final String AUDIO_DIR = "generated_audio/";
 
     public String generateAudio(String text) {
         RestTemplate restTemplate = new RestTemplate();
@@ -40,7 +40,8 @@ public class ElevenLabsService {
 
         Map<String, Object> body = new HashMap<>();
         body.put("text", text);
-        body.put("model_id", "eleven_monolingual_v1");
+        // Using "turbo" model to generate audio blazing fast
+        body.put("model_id", "eleven_turbo_v2_5");
         
         Map<String, Object> voiceSettings = new HashMap<>();
         voiceSettings.put("stability", 0.5);
@@ -74,7 +75,7 @@ public class ElevenLabsService {
             fos.write(audioData);
         }
 
-        // Return the relative URL path that Spring Boot will host the static file on
-        return "/audio/" + fileName;
+        // Return the API path that Spring Boot will use to serve this file
+        return "/api/audio/" + fileName;
     }
 }
