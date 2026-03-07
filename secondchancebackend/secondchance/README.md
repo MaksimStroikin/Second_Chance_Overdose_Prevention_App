@@ -7,32 +7,20 @@ This is the Spring Boot backend for the Second Chance hackathon project. It prov
 2. An active Internet connection.
 3. Access to the `application-secret.properties` file with active API Keys.
 
-## How to Run the Server Locally
+## Server Deployment (Render)
 
-Since our Twilio webhook requires a public URL to reach this computer for audio files, you MUST run this project using two separate terminals inside VS Code.
+The backend is officially deployed and running live on the cloud! 
 
-### Step 1: Open the Public Tunnel
-1. Open a terminal in VS Code.
-2. Run the following command to expose port 8080 to the internet:
-   ```bash
-   ssh -R 80:localhost:8080 nokey@localhost.run
-   ```
-3. Look at the output. It will give you a public URL (e.g., `https://2b1811ce78a559.lhr.life`).
-4. Keep this terminal open and running! Do not type anything else into it.
+🚀 **Live API URL:** `https://hack-canada-2026.onrender.com`
 
-### Step 2: Update Application Properties
-1. Open `src/main/resources/application-secret.properties` (or create it if you cloned fresh and it was ignored by git).
-2. Look for the `app.base.url=` line.
-3. Paste the brand new `localhost.run` URL you just copied from the previous step. Save the file.
+**Frontend Developers (React Native):**
+You do NOT need to run this Spring Boot server locally or set up any `localhost.run` tunnels. Simply point your `fetch()` requests directly to the live URL above. (See `API_REFERENCE.md` for specific endpoints).
 
-### Step 3: Start Spring Boot
-1. In VS Code, click the `+` button in the terminal panel to open a **second, separate terminal tab**.
-2. Make sure you are in the `secondchance` root folder.
-3. Run the Spring Boot server:
-   ```bash
-   ./gradlew bootRun
-   ```
-4. Wait for the console to say `Tomcat started on port 8080`.
+**Backend Developers (Java):**
+If you need to make changes to the backend:
+1. Make your code changes in `secondchance`.
+2. Commit and push to the `main` branch.
+3. Render is connected to this repository and will **automatically compile and deploy your changes** within 3–5 minutes of pushing.
 
 ## How to Test the Project
 
