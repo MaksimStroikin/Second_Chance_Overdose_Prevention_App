@@ -76,7 +76,7 @@
 
             try {
                 // Must be localhost if testing from the same machine
-                const response = await fetch('http://localhost:8080/api/qna/send-message', {
+                const response = await fetch('https://hack-canada-2026.onrender.com/api/qna/send-message', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -91,7 +91,7 @@
 
                 // Set Audio and Play
                 if (data.voiceover) {
-                    audioPlayer.src = `http://localhost:8080${data.voiceover}`;
+                    audioPlayer.src = `https://hack-canada-2026.onrender.com${data.voiceover}`;
                     audioPlayer.style.display = "block";
                     audioPlayer.play();
                 }
