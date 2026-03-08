@@ -1,0 +1,1 @@
+export default API = "https://hack-canada-2026.onrender.com/api";
