@@ -6,7 +6,6 @@ export const ui_elements_styles = StyleSheet.create({
         display: 'flex',
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: 10,
     },
     buttonPressed: {
         opacity: 0.7
@@ -14,7 +13,9 @@ export const ui_elements_styles = StyleSheet.create({
     primaryEmergencyButton: {
         backgroundColor: "#FF0000",
         width: "100%",
-        aspectRatio: "1/1"
+        aspectRatio: "1/1",
+        borderRadius: 3,
+        color: "#000000ff",
     },
     secondaryEmergencyButton: {
         backgroundColor: "#FFCE1B",
@@ -22,14 +23,14 @@ export const ui_elements_styles = StyleSheet.create({
         height: "auto",
         paddingTop: 20,
         paddingBottom: 20,
-    },
-    slidesButton: {
-        backgroundColor: "#FFFFFF",
+        color: "#000000ff",
+        borderRadius: 3,
     },
     infoButton: {
         backgroundColor: "#F3F4EF",
         paddingVertical: 5,
         paddingHorizontal: 12,
+        borderRadius: 10,
     },
     buttonText: {
         color: "black",
@@ -51,58 +52,96 @@ export const ui_elements_styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "bold",
     },
-    textInputContainer: {
+    infoListButton: {
         width: "100%",
-        height: "auto",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        boxSizing: "border-box",
-        gap: 10
-    },
-    textInput: {
-        flex: 1,
-        fontSize: 20,
-        borderWidth: 5,
+        height: 120,
+        backgroundColor: "#F3F4EF",
+        paddingHorizontal: 12,
         borderColor: "#1E5E65",
-        borderRadius: 10
-    },
-    responseChoiceContainer: {
-        width: "100%",
-        height: "auto",
-        display: "flex",
-        justifyContent: "space-between",
-        gap: 10,
-        flexDirection: "row",
-        alignItems: "center",
-        borderWidth: 5,
-        borderColor: "#1E5E65",
+        borderWidth: 3,
         borderRadius: 10,
-        padding: 10
+        justifyContent: "center",
     },
-    responseChoiceButton: {
-        width: 50,
-        aspectRatio: "1/1",
-        borderWidth: 5,
-        borderColor: "#1E5E65",
-        fontWeight: 30
+    infoListText: {
+        color: "#1E5E65",
+        fontSize: 36,
+        fontWeight: "bold",
+        textAlign: "center",
     },
-    sendMessageButton: {
-        alignSelf: "stretch",
-        aspectRatio: "1/1",
-        padding: 5,
-        borderWidth: 5,
-        borderColor: "#1E5E65",
+    floatingButtonContainer: {
+        position: 'absolute',
+        bottom: 40,
+        right: 20,
+        zIndex: 100,
+        elevation: 5,
     },
-    suggestedQuestionContainer: {
-        flex: 1,
-        width: "auto",
-        height: "auto",
+    floatingButton: {
+        width: 80,
+        height: 80,
+        backgroundColor: '#F3F4EF',
+        borderColor: '#1E5E65',
         borderWidth: 5,
-        borderColor: "#1E5E65",
-        borderRadius: 10,
-        fontWeight: "bold"
+        borderRadius: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    floatingButtonImage: {
+        width: 45,
+        height: 45,
+        resizeMode: 'contain',
     }
+},
+    textInputContainer: {
+    width: "100%",
+    height: "auto",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    boxSizing: "border-box",
+    gap: 10
+},
+    textInput: {
+    flex: 1,
+    fontSize: 20,
+    borderWidth: 5,
+    borderColor: "#1E5E65",
+    borderRadius: 10
+},
+    responseChoiceContainer: {
+    width: "100%",
+    height: "auto",
+    display: "flex",
+    justifyContent: "space-between",
+    gap: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 5,
+    borderColor: "#1E5E65",
+    borderRadius: 10,
+    padding: 10
+},
+    responseChoiceButton: {
+    width: 50,
+    aspectRatio: "1/1",
+    borderWidth: 5,
+    borderColor: "#1E5E65",
+    fontWeight: 30
+},
+    sendMessageButton: {
+    alignSelf: "stretch",
+    aspectRatio: "1/1",
+    padding: 5,
+    borderWidth: 5,
+    borderColor: "#1E5E65",
+},
+    suggestedQuestionContainer: {
+    flex: 1,
+    width: "auto",
+    height: "auto",
+    borderWidth: 5,
+    borderColor: "#1E5E65",
+    borderRadius: 10,
+    fontWeight: "bold"
 })
 
 

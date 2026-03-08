@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "HackCanadaReactNative",
-    "slug": "HackCanadaReactNative",
+    "name": "Second Chance Overdose Prevention App",
+    "slug": "Second_Chance_Overdose_Prevention_App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo_hackathon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#D8FFEB"
     },
     "ios": {
       "supportsTablet": true
