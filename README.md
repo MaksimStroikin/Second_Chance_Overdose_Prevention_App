@@ -1,2 +1,8 @@
-# Hack_Canada_2026
-The following repository features our team's submission for hackathon Canada 2026. Our idea is to create an app meant to combat the opioid epic in Canada and provide the tools both to those wishing to help as well as those impacted.
+# Second Chance - Overdose Prevention App
+The following Github Repository contains the code and all the information regarding the "Second Chance" App meant to combat and prevent opiod overdoses as well as reduce harm assosiated with the use of opiods. The app allows the user to:
+\begin{itemize}
+    \item Call emergency Services to User's Location at a Press of a Button
+    \item Recive Step-by-step instructions on identifying and overdose taking place and using a NALAXONE kit
+    \item Identify nearby Safe Injection Sites, Therapy Centers as well as places to get a free NALAXONE kit on a map.
+    \item Talk with a built-in agent to learn more about the dangers of opiods and recive other support. 
+\end{itemize}
