@@ -1,3 +1,5 @@
+This branch contains the functional implementation of the backend part of the project.
+
 # Second Chance - Overdose Prevention App
 The following Github Repository contains the code and all the information regarding the "Second Chance" App meant to combat and prevent opiod overdoses as well as reduce harm assosiated with the use of opiods. The app allows the user to:
     - Call emergency Services to User's Location at a Press of a Button
